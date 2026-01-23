@@ -1,3 +1,7 @@
+use spellbook::Burger;
+use spellbook::Fries;
+
 fn main() {
-    println!("Hello, world!");
+    let _ = Burger;
+    let _ = Fries;
 }

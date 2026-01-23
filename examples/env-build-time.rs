@@ -1,10 +1,10 @@
 fn main() {
     let user = env!("USER");
     println!("This binary was built by {user}");
-    let maybe_set = option_env!("MAYBE_SET");
-    if let Some(value) = maybe_set {
-        println!("MAYBE_SET was set to {value}");
+    let maybe_email = option_env!("USER_EMAIL");
+    if let Some(email) = maybe_email {
+        println!("USER_EMAIL was set to {email}");
     } else {
-        println!("MAYBE_SET wasn't set, actually");
+        println!("USER_EMAIL wasn't set, but we'll get by");
     }
 }

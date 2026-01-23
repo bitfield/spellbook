@@ -3,6 +3,13 @@ name = "spellbook"
 version = "0.1.0"
 edition = "2024"
 
+[features]
+fries = []
+gyro = ["fries"]
+olives = []
+breadsticks = []
+default = ["breadsticks", "olives"]
+
 [dependencies]
 anyhow = "1.0.100"
 rand = "0.9.2"
