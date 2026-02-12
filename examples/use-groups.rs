@@ -8,6 +8,6 @@ use std::collections::HashMap;
 use std::process;
 
 // Finally, the closest of all: items from this crate
-use spellbook::example::Item;
+use spellbook::Burger;
 
 fn main() {}
