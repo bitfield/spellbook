@@ -1,0 +1,15 @@
+use std::mem;
+
+fn main() {
+    struct Thing(Option<String>);
+
+    impl Thing {
+        fn ping(&mut self) {
+            let ring = mem::take(&mut self.0);
+            println!("{}", ring.unwrap());
+        }
+    }
+
+    let mut ding = Thing(Some("tingaling".into()));
+    ding.ping();
+}
