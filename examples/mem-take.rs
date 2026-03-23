@@ -6,7 +6,7 @@ fn main() {
     impl Thing {
         fn ping(&mut self) {
             let ring = mem::take(&mut self.0);
-            println!("{}", ring.unwrap());
+            println!("{ring:?}");
         }
     }
 

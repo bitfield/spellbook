@@ -1,5 +1,5 @@
 #[must_use]
-pub struct Payload(i32);
+pub struct Payload(pub i32);
 
 fn main() {
     Payload(42);
