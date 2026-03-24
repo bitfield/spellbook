@@ -1,12 +1,10 @@
-use jiff::Zoned;
-
-use std::collections::HashMap;
-
 fn main() {
+    use std::collections::HashMap;
+
     let mut birds = HashMap::new();
     birds
         .entry("blackbird")
-        .or_insert_with(|| Zoned::now().date());
+        .or_insert_with(|| jiff::Zoned::now().date());
     for (bird, sighting) in birds {
         println!("{bird}: {sighting}");
     }

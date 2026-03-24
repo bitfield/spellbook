@@ -1,6 +1,6 @@
-use std::collections::HashMap;
-
 fn main() {
+    use std::collections::HashMap;
+
     let crew = HashMap::from([
         (1, "Jack Aubrey"),
         (2, "Stephen Maturin"),
