@@ -2,7 +2,7 @@ use spellbook::{Lunch, Soup};
 
 fn main() {
     if let Some(lunch) = maybe_get_lunch() {
-        println!("This place has the best {lunch:?}");
+        println!("{lunch}");
     }
 }
 

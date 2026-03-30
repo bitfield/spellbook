@@ -1,3 +1,5 @@
+use std::fmt::Display;
+
 /// ```
 /// # use spellbook::Burger;
 /// let _ = Burger;
@@ -34,3 +36,9 @@ impl Soup {
 
 #[derive(Debug)]
 pub struct Lunch(pub Soup);
+
+impl Display for Lunch {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "Today's lunch is {:?}", self.0)
+    }
+}
