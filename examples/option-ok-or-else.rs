@@ -2,7 +2,7 @@ use spellbook::Soup;
 
 fn main() {
     match try_making_soup() {
-        Ok(lunch) => println!("Mmm. {lunch:?}."),
+        Ok(lunch) => println!("Mmm. {lunch}."),
         Err(problem) => eprintln!("{problem}"),
     }
 }

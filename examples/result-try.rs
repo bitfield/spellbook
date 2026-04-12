@@ -8,7 +8,7 @@ fn main() {
 
 fn lunch_if_possible() -> Result<(), String> {
     let soup = try_making_soup()?;
-    println!("Yummy {soup:?}!");
+    println!("Yummy {soup}!");
     Ok(())
 }
 
