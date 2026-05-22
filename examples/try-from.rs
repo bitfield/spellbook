@@ -1,3 +1,7 @@
+#[expect(
+    clippy::shadow_unrelated,
+    reason = "showing different outcomes"
+)]
 fn main() {
     let input: u16 = 300;
     if let Ok(output) = u8::try_from(input) {

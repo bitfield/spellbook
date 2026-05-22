@@ -4,6 +4,7 @@ fn main() {
     println!("{}", multiply(2, 2));
 }
 
+#[expect(clippy::undocumented_unsafe_blocks, reason = "example")]
 fn multiply(x: i32, y: i32) -> i32 {
     let result: i32;
     unsafe {

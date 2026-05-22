@@ -1,4 +1,4 @@
-use std::fmt::{Debug, Display};
+use std::fmt::{Debug, Display, Formatter, Result};
 
 /// ```
 /// # use spellbook::Burger;
@@ -23,19 +23,19 @@ impl Default for Soup {
 }
 
 impl Display for Soup {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         Debug::fmt(self, f)
     }
 }
 
 impl Soup {
     #[must_use]
-    pub fn new() -> Self {
+    pub fn from(_: &str) -> Self {
         Self
     }
 
     #[must_use]
-    pub fn from(_: &str) -> Self {
+    pub fn new() -> Self {
         Self
     }
 }
@@ -44,7 +44,7 @@ impl Soup {
 pub struct Lunch(pub Soup);
 
 impl Display for Lunch {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> Result {
         Debug::fmt(self, f)
     }
 }

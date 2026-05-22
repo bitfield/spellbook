@@ -1,5 +1,10 @@
 use spellbook::Soup;
 
+#[expect(
+    clippy::shadow_unrelated,
+    reason = "showing different approaches"
+)]
+#[expect(clippy::unreachable, reason = "example")]
 fn main() {
     let deserves_soup = true;
     let maybe_soup = deserves_soup.then(Soup::new);
@@ -14,14 +19,18 @@ fn main() {
     println!("{maybe_soup:?}");
     // Making tomato soup...
     // Some(Soup)
-    let _ = ingredient;
 
     println!("{:?}", false.then(|| unreachable!()));
     // None
 
-    let done = 12;
-    let total = 20;
-    let percent = if total != 0 { done * 100 / total } else { 0 };
+
+    let done = 12_i32;
+    let total = 20_i32;
+    let percent = if total != 0_i32 {
+        done.strict_mul(100_i32).strict_div(total)
+    } else {
+        0_i32
+    };
     println!("{percent}% done");
     // 60% done
 }

@@ -16,3 +16,21 @@ anyhow = "1.0.100"
 jiff = "0.2.20"
 rand = "0.9.2"
 uuid = { version = "1.21.0", features = ["v4"] }
+
+[lints.clippy]
+as_conversions = "deny"
+arithmetic_side_effects = "deny"
+unwrap_used = "deny"
+pedantic = { level = "warn", priority = -1 }
+restriction = { level = "warn", priority = -1 }
+blanket_clippy_restriction_lints = "allow"
+std_instead_of_core = "allow"
+exhaustive_structs = "allow"
+missing_inline_in_public_items = "allow"
+implicit_return = "allow"
+use_debug = "allow"
+print_stdout = "allow"
+separated_literal_suffix = "allow"
+single_call_fn = "allow"
+missing_docs_in_private_items = "allow"
+semicolon_outside_block = "allow"

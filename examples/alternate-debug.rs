@@ -12,6 +12,6 @@ fn main() {
         year: 1991,
     };
     println!("{car:#?}");
-    let slice = &[1, 2, 3];
+    let slice: &[i32] = &[1, 2, 3];
     println!("{slice:#?}");
 }
