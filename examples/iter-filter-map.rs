@@ -1,3 +1,4 @@
+#[expect(clippy::min_ident_chars, reason = "reduce line width")]
 fn main() {
     let breakfast = [
         "bacon and eggs",

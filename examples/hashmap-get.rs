@@ -1,3 +1,4 @@
+#[expect(clippy::panic, reason = "demonstrating let .. else")]
 fn main() {
     use std::collections::HashMap;
 

@@ -1,3 +1,7 @@
+#[expect(clippy::dbg_macro, reason = "demonstrating dbg!")]
+#[expect(clippy::shadow_unrelated, reason = "alternate approach")]
+#[expect(clippy::integer_division, reason = "for simplicity")]
+#[expect(clippy::integer_division_remainder_used, reason = "ditto")]
 fn main() {
     let value = 2 * 2;
     dbg!(value);

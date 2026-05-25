@@ -1,10 +1,13 @@
+#![expect(clippy::iter_cloned_collect, reason = "example of `cloned`")]
 fn main() {
     let chocs = [
         "caramel softy".to_owned(),
-        "hazelnut swirl".to_owned(),
+        "fudge duet".to_owned(),
         "white truffle".to_owned(),
     ];
-    let snack: Vec<String> = chocs.iter().take(2).cloned().collect();
-    println!("{snack:?}");
-    println!("{chocs:?}");
+    let cloned_chocs: Vec<String> = chocs.iter().cloned().collect();
+    println!("Cloned chocs: {cloned_chocs:?}");
+    // Cloned chocs: ["caramel softy", "fudge duet", "white truffle"]
+    println!("Originals: {chocs:?}");
+    // Originals: ["caramel softy", "fudge duet", "white truffle"]
 }

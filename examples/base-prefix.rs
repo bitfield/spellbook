@@ -1,4 +1,3 @@
-#[expect(clippy::default_numeric_fallback, reason = "readability")]
 fn main() {
     // Normal `Debug` format:
     println!("{:b}", 42);

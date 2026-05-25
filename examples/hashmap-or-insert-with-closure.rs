@@ -1,3 +1,4 @@
+#[expect(clippy::iter_over_hash_type, reason = "only one item")]
 fn main() {
     use std::collections::HashMap;
 

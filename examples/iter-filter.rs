@@ -1,3 +1,4 @@
+#[expect(clippy::min_ident_chars, reason = "reduce line width")]
 fn main() {
     let foods = [
         "egg and chips",
@@ -14,7 +15,7 @@ fn main() {
     // sausage and chips
     // fish and chips
 
-    let data = [8i32, -4, -7, 2, 0, 5];
+    let data = [8_i32, -4, -7, 2, 0, 5];
     for pos in data.iter().filter(|&&n| n >= 0) {
         print!("{pos} ");
     }

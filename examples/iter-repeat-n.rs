@@ -5,6 +5,6 @@ fn main() {
     for bun in eight_buns {
         print!("{bun} ");
     }
-    println!("— Full up!");
-    // bun bun bun bun bun bun bun bun — Full up!
+    println!("- Full up!");
+    // bun bun bun bun bun bun bun bun - Full up!
 }

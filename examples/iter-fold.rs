@@ -1,4 +1,3 @@
-#[expect(clippy::default_numeric_fallback, reason = "for readability")]
 fn main() {
     let mut sum = 0_i32;
     for n in [1, 2, 3] {

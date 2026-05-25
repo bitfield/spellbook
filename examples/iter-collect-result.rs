@@ -1,3 +1,4 @@
+#[expect(clippy::shadow_unrelated, reason = "different approaches")]
 fn main() {
     let results = [
         Ok("hot dog"),
