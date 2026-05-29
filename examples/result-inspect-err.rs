@@ -1,6 +1,7 @@
+#[expect(clippy::print_stderr, reason = "simplicity")]
 fn main() {
-    let possible_cake = try_bake().inspect_err(|e| {
-        eprintln!("It went... {e}.");
+    let possible_cake = try_bake().inspect_err(|err| {
+        eprintln!("It went... {err}.");
     });
     if let Ok(cake) = possible_cake {
         println!("One slice of {cake} or two?");

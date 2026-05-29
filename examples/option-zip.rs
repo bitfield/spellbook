@@ -1,6 +1,8 @@
+#[expect(clippy::expect_used, reason = "simplicity")]
+#[expect(clippy::min_ident_chars, reason = "line width")]
 fn main() {
-    let maybe_bread = Some("bread".to_string());
-    let maybe_cheese = Some("cheese".to_string());
+    let maybe_bread = Some("bread".to_owned());
+    let maybe_cheese = Some("cheese".to_owned());
     let snack = maybe_bread
         .zip(maybe_cheese)
         .map(|(a, b)| {

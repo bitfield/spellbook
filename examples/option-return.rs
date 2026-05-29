@@ -6,6 +6,7 @@ fn main() {
     }
 }
 
+#[expect(clippy::pattern_type_mismatch, reason = "clarity")]
 fn first<T>(list: &[T]) -> Option<&T> {
     if let [first, ..] = list {
         Some(first)

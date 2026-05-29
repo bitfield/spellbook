@@ -4,6 +4,7 @@ fn main() {
     print_with_color("Hello, world!", None);
 }
 
+#[expect(clippy::shadow_reuse, reason = "example")]
 fn print_with_color(text: &str, color: Option<AnsiColor>) {
     let color = color.unwrap_or(AnsiColor::White);
     let style = Style::new().fg_color(Some(Color::Ansi(color)));

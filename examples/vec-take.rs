@@ -1,3 +1,4 @@
+#[expect(clippy::absolute_paths, reason = "explicitness")]
 fn main() {
     let mut buf = Vec::new();
     buf.push("golden idol");

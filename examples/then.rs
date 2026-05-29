@@ -23,7 +23,6 @@ fn main() {
     println!("{:?}", false.then(|| unreachable!()));
     // None
 
-
     let done = 12_i32;
     let total = 20_i32;
     let percent = if total != 0_i32 {

@@ -1,3 +1,4 @@
+#[expect(clippy::expect_used, reason = "example")]
 fn main() {
     try_deploy_solar_panels().expect("mission terminated");
 }

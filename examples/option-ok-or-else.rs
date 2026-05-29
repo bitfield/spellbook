@@ -1,5 +1,6 @@
 use spellbook::Soup;
 
+#[expect(clippy::print_stderr, reason = "example")]
 fn main() {
     match try_making_soup() {
         Ok(lunch) => println!("Mmm. {lunch}."),

@@ -1,15 +1,16 @@
+#[expect(clippy::absolute_paths, reason = "explicitness")]
 fn main() {
     type Job = String;
     struct Machine {
         active: Vec<Job>,
         pending: Vec<Job>,
     }
-    let mut m = Machine {
+    let mut mc = Machine {
         active: Vec::new(),
         pending: Vec::new(),
     };
-    m.pending.push(Job::from("payroll"));
+    mc.pending.push(Job::from("payroll"));
     // Flip the buffers: pending jobs become active
-    std::mem::swap(&mut m.active, &mut m.pending);
-    println!("{:?}", m.active.first());
+    std::mem::swap(&mut mc.active, &mut mc.pending);
+    println!("{:?}", mc.active.first());
 }

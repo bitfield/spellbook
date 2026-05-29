@@ -1,5 +1,6 @@
 fn main() {
-    let mut snacks = vec!["popcorn", "crisps", "nuts"].into_iter();
-    println!("{:?}", snacks.nth(2));
+    let snacks = vec!["popcorn", "crisps", "nuts"];
+    let mut snack_iter = snacks.into_iter();
+    println!("{:?}", snack_iter.nth(2));
     // Some("nuts")
 }

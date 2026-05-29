@@ -1,11 +1,11 @@
 use std::env;
 
-use anyhow::{Context, Result};
+use anyhow::{Context as _, Result};
 
 fn main() -> Result<()> {
     let port: Option<u16> = env::var("PORT")
         .ok()
-        .map(|s| s.parse().context("invalid port"))
+        .map(|raw| raw.parse().context("invalid port"))
         .transpose()?;
     println!("{port:?}");
     Ok(())

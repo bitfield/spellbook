@@ -1,7 +1,8 @@
+#[expect(clippy::print_stderr, reason = "example")]
 fn main() {
     try_bake()
-        .map_err(|e| format!("It went... {e}."))
-        .unwrap_or_else(|e| eprintln!("{e}"));
+        .map_err(|err| format!("It went... {err}."))
+        .unwrap_or_else(|err| eprintln!("{err}"));
 }
 
 #[expect(clippy::unnecessary_wraps, reason = "example")]

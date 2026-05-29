@@ -1,3 +1,4 @@
+#[expect(clippy::print_stderr, reason = "example")]
 fn main() {
     let lunch = try_making_soup().unwrap_or_else(|err| {
         eprintln!("Bad news: {err}");

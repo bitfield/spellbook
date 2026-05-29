@@ -3,6 +3,7 @@ use spellbook::Soup;
 #[derive(Debug)]
 struct Supper(Soup);
 
+#[expect(clippy::expect_used, reason = "example")]
 fn main() {
     let possible_soup: Result<Soup, &'static str> = Ok(Soup);
     let possible_supper = possible_soup.map(|soup| {

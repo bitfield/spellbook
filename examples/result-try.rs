@@ -1,5 +1,6 @@
 use spellbook::Soup;
 
+#[expect(clippy::print_stderr, reason = "example")]
 fn main() {
     if let Err(problem) = lunch_if_possible() {
         eprintln!("{problem}");

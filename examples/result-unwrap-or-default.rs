@@ -1,4 +1,4 @@
-use std::fmt::Display;
+use std::fmt::{Display, Formatter};
 
 struct Snack(&'static str);
 
@@ -8,8 +8,12 @@ impl Default for Snack {
     }
 }
 
+#[expect(
+    clippy::absolute_paths,
+    reason = "disambiguate from core::result::Result"
+)]
 impl Display for Snack {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+    fn fmt(&self, f: &mut Formatter<'_>) -> std::fmt::Result {
         self.0.fmt(f)
     }
 }

@@ -1,3 +1,4 @@
+#[expect(clippy::pub_with_shorthand, reason = "example")]
 mod snacks {
     pub struct Popcorn;
     pub(crate) struct Chocolate;

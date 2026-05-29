@@ -1,9 +1,9 @@
-use rand::seq::IndexedRandom;
+use rand::seq::IndexedRandom as _;
 
-use std::iter::repeat_with;
-
+#[expect(clippy::expect_used, reason = "called on static")]
+#[expect(clippy::absolute_paths, reason = "clarity")]
 fn main() {
-    let pot_luck = repeat_with(|| {
+    let pot_luck = std::iter::repeat_with(|| {
         ["fajitas", "burger", "burrito"]
             .choose(&mut rand::rng())
             .expect("no food!")

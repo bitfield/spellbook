@@ -1,3 +1,4 @@
+#[expect(clippy::absolute_paths, reason = "explicitness")]
 fn main() {
     struct Thing(Option<String>);
 

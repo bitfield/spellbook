@@ -1,7 +1,6 @@
-use std::iter::repeat_n;
-
+#[expect(clippy::absolute_paths, reason = "clarity")]
 fn main() {
-    let eight_buns = repeat_n("bun", 8);
+    let eight_buns = std::iter::repeat_n("bun", 8);
     for bun in eight_buns {
         print!("{bun} ");
     }

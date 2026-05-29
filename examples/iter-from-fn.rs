@@ -1,8 +1,7 @@
-use std::iter::from_fn;
-
+#[expect(clippy::absolute_paths, reason = "explicitness")]
 fn main() {
     let mut drinks = 0_usize;
-    let mut barkeep = from_fn(|| {
+    let mut barkeep = std::iter::from_fn(|| {
         if drinks < 4 {
             println!(">>> Coming right up");
             drinks = drinks.saturating_add(1);
