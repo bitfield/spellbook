@@ -1,7 +1,7 @@
 fn main() {
     let mut sum = 0_i32;
-    for n in [1, 2, 3] {
-        sum = sum.strict_add(n);
+    for num in [1, 2, 3] {
+        sum = sum.strict_add(num);
     }
     println!("{sum}");
     // 6

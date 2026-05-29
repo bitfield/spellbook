@@ -1,4 +1,3 @@
-#[expect(clippy::min_ident_chars, reason = "reduce line width")]
 fn main() {
     let results = [
         Ok("hot dog"),
@@ -7,7 +6,7 @@ fn main() {
         Ok("fries"),
         Err("out of stock"),
     ];
-    for nosh in results.iter().filter_map(|r| r.ok()) {
+    for nosh in results.iter().filter_map(|food| food.ok()) {
         println!("{nosh:?}");
     }
     // "hot dog"

@@ -1,4 +1,3 @@
-#[expect(clippy::min_ident_chars, reason = "reduce line width")]
 fn main() {
     let breakfast = [
         "bacon and eggs",
@@ -6,9 +5,9 @@ fn main() {
         "sausages",
         "bacon sandwich",
     ];
-    for dish in breakfast.iter().filter_map(|f| {
-        f.starts_with("bacon")
-            .then_some(format!("{f} with hot sauce"))
+    for dish in breakfast.iter().filter_map(|food| {
+        food.starts_with("bacon")
+            .then_some(format!("{food} with hot sauce"))
     }) {
         println!("{dish}");
     }
