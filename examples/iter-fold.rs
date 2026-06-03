@@ -16,22 +16,22 @@ fn main() {
     println!("{sum}");
     // 6
 
-    let menu = [
+    let (chips, soss): (usize, usize) = [
         "sausage and chips",
         "steak and chips",
         "bacon and eggs",
         "sausage, beans, and chips",
-    ];
-    let (chips, soss): (usize, usize) =
-        menu.iter().fold((0, 0), |(mut chips, mut soss), dish| {
-            if dish.contains("chips") {
-                chips = chips.strict_add(1);
-            }
-            if dish.contains("sausage") {
-                soss = soss.strict_add(1);
-            }
-            (chips, soss)
-        });
+    ]
+    .iter()
+    .fold((0, 0), |(mut chips, mut soss), dish| {
+        if dish.contains("chips") {
+            chips = chips.strict_add(1);
+        }
+        if dish.contains("sausage") {
+            soss = soss.strict_add(1);
+        }
+        (chips, soss)
+    });
     println!("{chips} dishes with chips, {soss} with sausage");
     // 3 dishes with chips, 2 dishes with sausage
 }

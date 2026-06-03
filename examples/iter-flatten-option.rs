@@ -1,5 +1,5 @@
 fn main() {
-    let sweets = [
+    for sweet in [
         Some("chocolate"),
         None,
         Some("candy"),
@@ -7,8 +7,10 @@ fn main() {
         None,
         None,
         Some("toffee"),
-    ];
-    for sweet in sweets.iter().flatten() {
+    ]
+    .iter()
+    .flatten()
+    {
         println!("{sweet}");
     }
     // chocolate

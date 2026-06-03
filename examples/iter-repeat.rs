@@ -1,7 +1,7 @@
-#[expect(clippy::absolute_paths, reason = "clarity")]
+use std::iter;
+
 fn main() {
-    let infinite_buns = std::iter::repeat("bun");
-    for bun in infinite_buns {
+    for bun in iter::repeat("bun") {
         print!("{bun} ");
     }
     // bun bun bun bun bun bun...

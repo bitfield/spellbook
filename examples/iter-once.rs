@@ -1,13 +1,15 @@
+use std::iter;
+
 use spellbook::Soup;
 
-#[expect(clippy::absolute_paths, reason = "clarity")]
 #[expect(clippy::string_add, reason = "simplicity")]
 fn main() {
-    let one_soup = std::iter::once(Soup);
-    println!("{:?}", one_soup.collect::<Vec<_>>());
+    let soups: Vec<_> = iter::once(Soup).collect();
+    println!("{soups:?}");
     // [Soup]
 
-    let one_cake = std::iter::once_with(|| "Ca".to_owned() + "ke");
-    println!("{:?}", one_cake.collect::<Vec<_>>());
+    let cakes: Vec<_> =
+        iter::once_with(|| "Ca".to_owned() + "ke").collect();
+    println!("{cakes:?}");
     // ["Cake"]
 }

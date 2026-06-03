@@ -1,8 +1,6 @@
 fn main() {
-    let nums = [1, -1, 1, -1, 1];
-    let abs_nums = nums.into_iter().map(i32::abs);
-    for num in abs_nums {
+    for num in [1, -2, 3, -4, 5].into_iter().map(i32::abs) {
         print!("{num} ");
     }
-    // 1 1 1 1 1
+    // 1 2 3 4 5
 }

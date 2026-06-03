@@ -1,6 +1,6 @@
 fn main() {
-    let breakfast = ["bacon", "eggs", "waffles"];
-    for dish in breakfast.into_iter().map(str::chars) {
+    for dish in ["bacon", "eggs", "waffles"].into_iter().map(str::chars)
+    {
         for ch in dish {
             print!("{ch} ");
         }

@@ -1,6 +1,5 @@
 fn main() {
-    let nums: [i32; _] = [1, 2, 3];
-    let sum = nums
+    let sum = [1_usize, 2, 3]
         .into_iter()
         .reduce(|sum, n| sum.strict_add(n))
         .unwrap_or_default();

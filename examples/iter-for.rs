@@ -1,6 +1,5 @@
 fn main() {
-    let snacks = vec!["popcorn", "crisps", "nuts"];
-    for snack in snacks {
+    for snack in ["popcorn", "crisps", "nuts"] {
         println!("{snack}");
     }
     // popcorn

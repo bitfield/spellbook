@@ -1,7 +1,7 @@
-#[expect(clippy::absolute_paths, reason = "clarity")]
+use std::iter;
+
 fn main() {
-    let eight_buns = std::iter::repeat_n("bun", 8);
-    for bun in eight_buns {
+    for bun in iter::repeat_n("bun", 8) {
         print!("{bun} ");
     }
     println!("- Full up!");

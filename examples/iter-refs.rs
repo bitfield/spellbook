@@ -1,7 +1,7 @@
 use spellbook::Soup;
 
 fn main() {
-    let two_soups = [Soup, Soup];
+    let two_soups = vec![Soup, Soup];
     let mut soup_iter = two_soups.iter(); // not `into_iter`
     println!("{:?}", soup_iter.next());
     // Some(Soup)
