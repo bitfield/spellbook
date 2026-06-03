@@ -5,10 +5,7 @@ fn main() {
 }
 
 #[expect(clippy::ref_option, reason = "example")]
-#[expect(
-    clippy::pattern_type_mismatch,
-    reason = "demonstrating auto-ref"
-)]
+#[expect(clippy::pattern_type_mismatch, reason = "demonstrating auto-ref")]
 fn print_len(maybe_name: &Option<String>) {
     if let Some(name) = maybe_name {
         println!("{}", name.len());

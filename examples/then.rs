@@ -1,9 +1,6 @@
 use spellbook::Soup;
 
-#[expect(
-    clippy::shadow_unrelated,
-    reason = "showing different approaches"
-)]
+#[expect(clippy::shadow_unrelated, reason = "showing different approaches")]
 #[expect(clippy::unreachable, reason = "example")]
 fn main() {
     let deserves_soup = true;

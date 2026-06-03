@@ -20,8 +20,7 @@ impl Display for Snack {
 
 #[expect(clippy::unnecessary_literal_unwrap, reason = "example")]
 fn main() {
-    let possible_snack: Result<Snack, _> =
-        Err("forgot to buy groceries");
+    let possible_snack: Result<Snack, _> = Err("forgot to buy groceries");
     let snack = possible_snack.unwrap_or_default();
     println!("Hope you're in the mood for {snack}");
     // Hope you're in the mood for whatever's in the fridge

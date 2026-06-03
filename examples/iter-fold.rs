@@ -6,10 +6,7 @@ fn main() {
     println!("{sum}");
     // 6
 
-    #[expect(
-        clippy::shadow_unrelated,
-        reason = "showing different approach"
-    )]
+    #[expect(clippy::shadow_unrelated, reason = "showing different approach")]
     let sum = [1, 2, 3]
         .into_iter()
         .fold(0_i32, |sum, n| sum.strict_add(n));

@@ -8,8 +8,7 @@ fn main() {
     println!("{soups:?}");
     // [Soup]
 
-    let cakes: Vec<_> =
-        iter::once_with(|| "Ca".to_owned() + "ke").collect();
+    let cakes: Vec<_> = iter::once_with(|| "Ca".to_owned() + "ke").collect();
     println!("{cakes:?}");
     // ["Cake"]
 }

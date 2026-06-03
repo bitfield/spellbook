@@ -1,7 +1,4 @@
-#[expect(
-    clippy::cast_possible_truncation,
-    reason = "showing what not to do"
-)]
+#[expect(clippy::cast_possible_truncation, reason = "showing what not to do")]
 #[expect(clippy::as_conversions, reason = "example")]
 fn main() {
     let input: u16 = 300;

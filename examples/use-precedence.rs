@@ -1,7 +1,4 @@
-#[expect(
-    clippy::arbitrary_source_item_ordering,
-    reason = "more logical"
-)]
+#[expect(clippy::arbitrary_source_item_ordering, reason = "more logical")]
 fn main() {
     enum Option<T> {
         Yep(T),

@@ -1,9 +1,6 @@
 use spellbook::{Lunch, Soup};
 
-#[expect(
-    clippy::shadow_unrelated,
-    reason = "showing different approach"
-)]
+#[expect(clippy::shadow_unrelated, reason = "showing different approach")]
 fn main() {
     let maybe_soup = Some(Soup);
     let maybe_lunch = maybe_soup.map(Lunch);

@@ -4,9 +4,6 @@ fn main() {
         println!("round() of {val} is {:.1}", val.round());
     }
     for val in values {
-        println!(
-            "round_ties_even() of {val} is {:.1}",
-            val.round_ties_even()
-        );
+        println!("round_ties_even() of {val} is {:.1}", val.round_ties_even());
     }
 }

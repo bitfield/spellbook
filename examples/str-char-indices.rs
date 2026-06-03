@@ -1,7 +1,4 @@
-#[expect(
-    clippy::non_ascii_literal,
-    reason = "demonstrating bytes vs chars"
-)]
+#[expect(clippy::non_ascii_literal, reason = "demonstrating bytes vs chars")]
 #[expect(clippy::min_ident_chars, reason = "line width")]
 fn main() {
     for ch in "Why nøt trei oür møøse burger?".chars() {
@@ -11,8 +8,7 @@ fn main() {
     }
     // Found a ü character
 
-    for (pos, ch) in "Why nøt trei oür møøse burger?".char_indices()
-    {
+    for (pos, ch) in "Why nøt trei oür møøse burger?".char_indices() {
         if ch == 'ü' {
             println!("Found a ü at byte position {pos}");
         }
