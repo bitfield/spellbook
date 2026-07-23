@@ -1,4 +1,4 @@
-use std::iter::{Repeat, repeat};
+use std::iter::{self, Repeat};
 
 struct InfiniteCookieJar;
 
@@ -7,7 +7,7 @@ impl IntoIterator for InfiniteCookieJar {
     type Item = &'static str;
 
     fn into_iter(self) -> Self::IntoIter {
-        repeat("Cookie")
+        iter::repeat("Cookie")
     }
 }
 

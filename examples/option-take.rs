@@ -10,4 +10,5 @@ fn main() {
 
     let mut ding = Thing(Some("tingaling".into()));
     ding.ping();
+    // Some("tingaling")
 }

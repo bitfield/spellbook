@@ -1,4 +1,3 @@
-#[expect(clippy::non_ascii_literal, reason = "demonstrating bytes vs chars")]
 fn main() {
     for byte in "Why nøt trei oür møøse burger?".as_bytes() {
         print!("{byte:02X} ");

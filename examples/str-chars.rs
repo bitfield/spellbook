@@ -1,4 +1,3 @@
-#[expect(clippy::non_ascii_literal, reason = "demonstrating bytes vs chars")]
 fn main() {
     for ch in "Why nøt trei oür møøse burger?".chars() {
         print!("{ch} ");

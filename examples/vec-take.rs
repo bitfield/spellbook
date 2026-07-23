@@ -5,4 +5,5 @@ fn main() {
     let idol = std::mem::take(&mut buf);
     buf.push("bag of sand");
     println!("{idol:?}, {buf:?}");
+    // ["golden idol"], ["bag of sand"]
 }

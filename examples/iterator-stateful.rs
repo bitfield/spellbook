@@ -14,4 +14,7 @@ fn main() {
     for sausage in SausageMachine::default().take(3) {
         println!("{sausage}");
     }
+    // Sausage no.1
+    // Sausage no.2
+    // Sausage no.3
 }

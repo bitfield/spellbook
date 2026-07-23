@@ -1,7 +1,11 @@
 #[expect(clippy::unnecessary_literal_unwrap, reason = "example")]
 fn main() {
-    let maybe_lasagna = Some("Lasagna");
-    let dinner = maybe_lasagna.unwrap_or("Hot Pockets");
+    let mut maybe_lasagna = Some("Lasagna");
+    let mut dinner = maybe_lasagna.unwrap_or("Hot Pockets");
     println!("{dinner}");
     // Lasagna
+    maybe_lasagna = None;
+    dinner = maybe_lasagna.unwrap_or("Hot Pockets");
+    println!("{dinner}");
+    // Hot Pockets
 }

@@ -7,6 +7,7 @@ fn main() {
         eggs
     };
     println!("{eggs}");
+    // 61
 }
 
 #[expect(clippy::unnecessary_wraps, reason = "example")]
