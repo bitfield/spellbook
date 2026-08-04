@@ -19,7 +19,11 @@ fn main() {
         dish.push_str(" with chocolate sauce");
     }
     println!("{desserts:#?}");
-
+    // [
+    //     "ice cream with chocolate sauce",
+    //     "cake with chocolate sauce",
+    //     "pudding with chocolate sauce",
+    // ]
     let mut desserts = [
         "ice cream".to_owned(),
         "cake".to_owned(),
@@ -29,4 +33,9 @@ fn main() {
         dish.push_str(" with chocolate sauce");
     }
     println!("{desserts:#?}");
+    // [
+    //     "ice cream with chocolate sauce",
+    //     "cake with chocolate sauce",
+    //     "pudding with chocolate sauce",
+    // ]
 }

@@ -1,6 +1,7 @@
 fn main() {
     let lunch = try_making_soup().unwrap_or("sandwiches");
     println!("I guess we're having {lunch}");
+    // I guess we're having sandwiches
 }
 
 fn try_making_soup() -> Result<&'static str, &'static str> {

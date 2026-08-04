@@ -5,4 +5,5 @@ fn main() {
     if guests > 0 {
         println!("Hope there's enough lasagna for {guests} guests");
     }
+    // Hope there's enough lasagna for 3 guests
 }

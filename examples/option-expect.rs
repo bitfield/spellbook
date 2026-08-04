@@ -4,6 +4,6 @@ use spellbook::Soup;
 #[expect(clippy::expect_used, reason = "demo of expect")]
 fn main() {
     let maybe_soup: Option<Soup> = Some(Soup);
-    println!("{:?}", maybe_soup.expect("No soup for you"));
+    println!("{}", maybe_soup.expect("No soup for you"));
     // Soup
 }

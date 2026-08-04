@@ -27,7 +27,7 @@ fn main() {
     // Mmm. Cake.
     Candy.eat();
     // Mmm. Candy.
-    
+
     let edibles: Vec<Box<dyn Eat>> = vec![Box::new(Cake), Box::new(Candy)];
     for snack in edibles {
         snack.yum();
