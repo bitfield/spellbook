@@ -13,4 +13,7 @@ fn main() {
     for food in fridge {
         println!("We should probably eat up this {food}");
     }
+    // We should probably eat up this cheese
+    // We should probably eat up this milk
+    // We should probably eat up this butter
 }
