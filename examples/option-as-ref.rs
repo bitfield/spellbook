@@ -6,5 +6,5 @@ fn main() {
 
 #[expect(clippy::ref_option, reason = "example")]
 fn print_len(st: &Option<String>) {
-    println!("{}", st.as_ref().map(String::len).unwrap_or_default());
+    println!("{}", st.as_ref().map_or_default(String::len));
 }

@@ -1,3 +1,4 @@
+#[expect(clippy::for_unbounded_range, reason = "example")]
 fn main() {
     for num in 0.. {
         print!("{num} ");

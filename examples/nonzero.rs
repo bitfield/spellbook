@@ -11,7 +11,6 @@ fn main() {
 fn blow_up_on_zero(val: NonZero<u8>) {
     if val.get() == 0 {
         unreachable!("Zero received, blowing up world");
-    } else {
-        println!("World escaped destruction... this time");
     }
+    println!("World escaped destruction... this time");
 }
